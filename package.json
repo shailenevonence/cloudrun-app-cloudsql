@@ -1,0 +1,21 @@
+{
+    "name": "your_node_app",
+    "version": "1.0.0",
+    "description": "Your Node.js application",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "keywords": [],
+    "author": "Google Inc.",
+    "license": "Apache Version 2.0",
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "dependencies": {
+      "express": "^4.17.2",
+      "knex": "^0.95.6",
+      "pg": "^8.7.1"
+    }
+  }
+  
