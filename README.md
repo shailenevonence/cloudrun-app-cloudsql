@@ -142,6 +142,12 @@ Define environment variables in Cloud Run:
 Ensure to set these environment variables in the Cloud Run service configuration with appropriate values for your PostgreSQL database.
 
 ---
+### References for Further Configuration:
+
+- [Connecting from Cloud Run to Cloud SQL (PostgreSQL) using Private IP](https://cloud.google.com/sql/docs/postgres/connect-run#private-ip_1)
+- [Configuring Secrets for Cloud Run](https://cloud.google.com/run/docs/configuring/jobs/secrets)
+
+---
 
 This README provides a guide to set up and deploy the Express.js application with a PostgreSQL database connection to Google Cloud Run via Artifact Registry. Adjustments might be needed according to your specific project setup and configurations.
 ```
