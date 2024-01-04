@@ -9,8 +9,12 @@ steps:
       ".",
     ]
 
-# Step 2: Push the Docker image to Artifact Registry
-- name: 'gcr.io/cloud-builders/artifact-registry/docker'
+# Step 2: Push the Docker image to Artifact Registry using gcloud
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+    - 'auth'
+    - 'configure-docker'
+- name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-central1-docker.pkg.dev/uptok-ee6a3/test/my-node-app:latest']
 
 # Step 3: Deploy the updated image to Cloud Run
