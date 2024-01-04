@@ -17,13 +17,16 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-central1-docker.pkg.dev/uptok-ee6a3/test/my-node-app:latest']
 
-# Step 3: Deploy the updated image to Cloud Run
+# Step 3: Update the existing Cloud Run service with the new Docker image
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
     - 'run'
-    - 'deploy'
+    - 'services'
+    - 'update'
     - 'my-node-app' # Replace with your Cloud Run service name
     - '--image=us-central1-docker.pkg.dev/uptok-ee6a3/test/my-node-app:latest'
+    - '--platform=managed'
+    - '--region=us-central1'
 
 options:
   env:
